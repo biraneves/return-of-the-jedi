@@ -1,0 +1,27 @@
+@use 'config/fn';
+@use 'config/mxn';
+@use 'config/vars';
+@use 'header';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+* {
+    @include mxn.reset;
+    list-style: none;
+}
+
+body {
+    background-color: vars.$bgColor;
+    color: vars.$lightSecondary;
+    font-family: vars.$fontBase;
+}

@@ -46,6 +46,15 @@ function htmlDist() {
         .pipe(gulp.dest('./dist'));
 }
 
+// Fonts
+function fontsDev() {
+    return gulp.src('./src/assets/fonts/*').pipe(gulp.dest('./dev/assets/fonts'));
+}
+
+function fontsDist() {
+    return gulp.src('./src/assets/fonts/*').pipe(gulp.dest('./dist/assets/fonts'));
+}
+
 // Exports
 exports.default = () => {
     gulp.watch(
@@ -60,4 +69,4 @@ exports.default = () => {
     );
 };
 
-exports.build = gulp.parallel(htmlDist, scriptsDist, stylesDist, imagesDist);
+exports.build = gulp.parallel(htmlDist, scriptsDist, stylesDist, imagesDist, fontsDev, fontsDist);
