@@ -1,0 +1,43 @@
+@use 'config/fn';
+@use 'config/mxn';
+@use 'config/vars';
+
+.sinopsis {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: fn.p2r(32px);
+
+    &__poster {
+        width: 100%;
+    }
+
+    &__content {
+        &__title {
+            font-size: fn.p2r(40px);
+            margin-bottom: fn.p2r(16px);
+        }
+
+        &__classification {
+            font-size: fn.p2r(14px);
+            margin-bottom: fn.p2r(16px);
+        }
+
+        &__text {
+            line-height: fn.p2r(24px);
+            margin-bottom: fn.p2r(32px);
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            span {
+                font-size: fn.p2r(40px);
+                margin-right: fn.p2r(16px);
+            }
+
+            a {
+                color: vars.$lightSecondary;
+            }
+        }
+    }
+}

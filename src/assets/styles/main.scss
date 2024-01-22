@@ -2,6 +2,8 @@
 @use 'config/mxn';
 @use 'config/vars';
 @use 'header';
+@use 'banner';
+@use 'sinopsis';
 
 @font-face {
     font-family: Avenir;
@@ -22,6 +24,19 @@
 
 body {
     background-color: vars.$bgColor;
+    background-image: url('../images/starry-night.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: vars.$lightSecondary;
     font-family: vars.$fontBase;
+}
+
+section {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: vars.$darkPrimary;
+    @include mxn.section-padding;
 }

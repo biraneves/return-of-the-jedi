@@ -5,7 +5,10 @@
 .header {
     background-color: vars.$bgColor;
     position: sticky;
+    top: 0;
+    left: 0;
     border-bottom: solid 1px vars.$lightSecondary;
+    z-index: 100;
 
     &__container {
         max-width: 1920px;
@@ -110,6 +113,29 @@
                         &--is-inactive {
                             display: none;
                         }
+                    }
+                }
+            }
+        }
+
+        &__bottom-row {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            padding-top: fn.p2r(32px);
+
+            &__links {
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+
+                &__item {
+                    position: relative;
+
+                    &__link {
+                        color: vars.$lightSecondary;
+                        text-decoration: none;
+                        text-transform: uppercase;
                     }
                 }
             }

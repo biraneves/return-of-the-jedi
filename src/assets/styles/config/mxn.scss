@@ -6,3 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@mixin section-padding {
+    padding: fn.p2r(40px) fn.p2r(32px);
+}
