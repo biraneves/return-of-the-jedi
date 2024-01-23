@@ -1,0 +1,40 @@
+@use 'config/fn';
+@use 'config/mxn';
+@use 'config/vars';
+
+.videos {
+    &__title {
+        @include mxn.section-title;
+        border-bottom: solid 1px vars.$lightSecondary;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: fn.p2r(24px);
+
+        &__item {
+            display: block;
+            background-color: vars.$darkSecondary;
+            border-radius: fn.p2r(8px);
+
+            &__image {
+                width: 100%;
+                border-top-left-radius: fn.p2r(8px);
+                border-top-right-radius: fn.p2r(8px);
+                margin-bottom: fn.p2r(12px);
+            }
+
+            &__decal {
+                margin-left: fn.p2r(16px);
+                @include mxn.decal;
+            }
+
+            &__caption {
+                margin: fn.p2r(12px) fn.p2r(16px);
+                font-size: fn.p2r(18px);
+            }
+        }
+    }
+}

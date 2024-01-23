@@ -62,29 +62,7 @@
                 }
 
                 &__decal {
-                    display: block;
-                    padding-bottom: fn.p2r(16px);
-                    position: relative;
-
-                    &::before {
-                        width: fn.p2r(4px);
-                        height: fn.p2r(4px);
-                        position: absolute;
-                        left: fn.p2r(30px);
-                        content: '';
-                        background-color: vars.$lightSecondary;
-                        border-radius: fn.p2r(4px);
-                    }
-
-                    &::after {
-                        width: fn.p2r(24px);
-                        height: fn.p2r(4px);
-                        position: absolute;
-                        left: fn.p2r(2px);
-                        content: '';
-                        background-color: vars.$lightSecondary;
-                        border-radius: fn.p2r(4px);
-                    }
+                    @include mxn.decal;
                 }
             }
         }
