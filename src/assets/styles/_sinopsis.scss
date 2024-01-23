@@ -13,8 +13,7 @@
 
     &__content {
         &__title {
-            font-size: fn.p2r(40px);
-            margin-bottom: fn.p2r(16px);
+            @include mxn.section-title;
         }
 
         &__classification {

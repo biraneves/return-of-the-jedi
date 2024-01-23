@@ -1,0 +1,92 @@
+@use 'config/fn';
+@use 'config/mxn';
+@use 'config/vars';
+
+.databank {
+    min-height: 920px;
+
+    &__title {
+        @include mxn.section-title;
+        border-bottom: solid 1px vars.$lightSecondary;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        &__tabs {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+
+            &__button {
+                padding-top: fn.p2r(16px);
+                padding-bottom: fn.p2r(16px);
+                padding-left: fn.p2r(12px);
+                font-size: fn.p2r(16px);
+                text-transform: uppercase;
+                text-align: left;
+                background-color: vars.$darkPrimary;
+                color: vars.$lightSecondary;
+                border: none;
+                cursor: pointer;
+                border-left: solid 3px vars.$darkPrimary;
+
+                &--is-active {
+                    border-left: solid 3px vars.$lightSecondary;
+                }
+
+                &:hover {
+                    color: vars.$bright;
+                }
+            }
+        }
+
+        &__list {
+            width: 78%;
+            grid-template-columns: repeat(6, 1fr);
+            gap: fn.p2r(16px);
+            display: none;
+
+            &--is-active {
+                display: grid;
+            }
+
+            &__item {
+                padding-bottom: fn.p2r(16px);
+
+                &__image {
+                    width: 100%;
+                    border-radius: fn.p2r(8px);
+                    margin-bottom: fn.p2r(8px);
+                }
+
+                &__decal {
+                    display: block;
+                    padding-bottom: fn.p2r(16px);
+                    position: relative;
+
+                    &::before {
+                        width: fn.p2r(4px);
+                        height: fn.p2r(4px);
+                        position: absolute;
+                        left: fn.p2r(30px);
+                        content: '';
+                        background-color: vars.$lightSecondary;
+                        border-radius: fn.p2r(4px);
+                    }
+
+                    &::after {
+                        width: fn.p2r(24px);
+                        height: fn.p2r(4px);
+                        position: absolute;
+                        left: fn.p2r(2px);
+                        content: '';
+                        background-color: vars.$lightSecondary;
+                        border-radius: fn.p2r(4px);
+                    }
+                }
+            }
+        }
+    }
+}

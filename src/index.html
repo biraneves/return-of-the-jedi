@@ -45,7 +45,7 @@
                                 <img id="jedi-cancel-button" src="./assets/images/sw_cancel_button.svg" alt="Cancel" />
                             </form>
                             <a href="#" class="header__container__top-row__functions__search__link">
-                                <span class="fa-solid fa-search"></span> Search
+                                <span class="fa-solid fa-search"></span> Busca
                             </a>
                         </div>
                         <div class="header__container__top-row__functions__sign-in">
@@ -124,6 +124,33 @@
                     <span class="fa-solid fa-jedi"></span>
                     <a href="#">Era: Idade da Rebelião</a>
                 </p>
+            </div>
+        </section>
+        <section id="databank" class="databank">
+            <h2 class="databank__title">Banco de Dados: O Retorno do Jedi</h2>
+            <div class="databank__content">
+                <nav class="databank__content__tabs">
+                    <button
+                        data-tab-button="characters"
+                        type="button"
+                        class="databank__content__tabs__button databank__content__tabs__button--is-active"
+                    >
+                        Personagens
+                    </button>
+                    <button data-tab-button="creatures" type="button" class="databank__content__tabs__button">
+                        Criaturas
+                    </button>
+                    <button data-tab-button="droids" type="button" class="databank__content__tabs__button">
+                        Droids
+                    </button>
+                    <button data-tab-button="locations" type="button" class="databank__content__tabs__button">
+                        Localidades
+                    </button>
+                </nav>
+                <ul data-tab-list="characters" class="databank__content__list databank__content__list--is-active"></ul>
+                <ul data-tab-list="creatures" class="databank__content__list"></ul>
+                <ul data-tab-list="droids" class="databank__content__list"></ul>
+                <ul data-tab-list="locations" class="databank__content__list"></ul>
             </div>
         </section>
         <script src="https://kit.fontawesome.com/3448507fd8.js" crossorigin="anonymous"></script>

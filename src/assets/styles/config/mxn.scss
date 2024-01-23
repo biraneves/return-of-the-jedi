@@ -10,3 +10,8 @@
 @mixin section-padding {
     padding: fn.p2r(40px) fn.p2r(32px);
 }
+
+@mixin section-title {
+    font-size: fn.p2r(40px);
+    margin-bottom: fn.p2r(16px);
+}
