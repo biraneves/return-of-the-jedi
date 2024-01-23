@@ -3,9 +3,17 @@
 @use 'config/vars';
 
 .videos {
+    @media screen and (max-width: vars.$bpMobile) {
+        padding: fn.p2r(24px) fn.p2r(16px);
+    }
+
     &__title {
         @include mxn.section-title;
         border-bottom: solid 1px vars.$lightSecondary;
+
+        @media screen and (max-width: vars.$bpMobile) {
+            font-size: fn.p2r(32px);
+        }
     }
 
     &__list {
@@ -13,6 +21,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: fn.p2r(24px);
+
+        @media screen and (max-width: vars.$bpMobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &__item {
             display: block;
@@ -34,6 +46,10 @@
             &__caption {
                 margin: fn.p2r(12px) fn.p2r(16px);
                 font-size: fn.p2r(18px);
+
+                @media screen and (max-width: vars.$bpMobile) {
+                    font-size: fn.p2r(16px);
+                }
             }
         }
     }

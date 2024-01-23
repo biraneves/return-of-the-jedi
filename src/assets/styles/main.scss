@@ -43,4 +43,9 @@ section {
     margin: 0 auto;
     background-color: vars.$darkPrimary;
     @include mxn.section-padding;
+
+    @media screen and (max-width: vars.$bpMobile) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

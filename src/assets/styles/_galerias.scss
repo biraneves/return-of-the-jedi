@@ -3,9 +3,17 @@
 @use 'config/vars';
 
 .galleries {
+    @media screen and (max-width: vars.$bpMobile) {
+        padding: fn.p2r(24px) fn.p2r(16px);
+    }
+
     &__title {
         @include mxn.section-title;
         border-bottom: solid 1px vars.$lightSecondary;
+
+        @media screen and (max-width: vars.$bpMobile) {
+            font-size: fn.p2r(32px);
+        }
     }
 
     &__list {
@@ -14,6 +22,11 @@
             grid-template-columns: repeat(2, 1fr);
             column-gap: fn.p2r(96px);
             margin-bottom: fn.p2r(96px);
+
+            @media screen and (max-width: vars.$bpMobile) {
+                display: block;
+                margin-bottom: fn.p2r(32px);
+            }
 
             &__image {
                 width: 100%;
@@ -27,6 +40,10 @@
                 &__title {
                     &__decal {
                         @include mxn.decal;
+
+                        @media screen and (max-width: vars.$bpMobile) {
+                            padding-top: fn.p2r(16px);
+                        }
                     }
 
                     &__text {

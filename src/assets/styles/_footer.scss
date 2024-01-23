@@ -8,6 +8,10 @@
     padding-top: fn.p2r(64px);
     padding-bottom: fn.p2r(32px);
 
+    @media screen and (max-width: vars.$bpMobile) {
+        padding-bottom: fn.p2r(24px);
+    }
+
     &__top-row {
         // max-width: 1920px;
         width: 100%;
@@ -47,6 +51,10 @@
         flex-direction: column;
         align-items: center;
 
+        @media screen and (max-width: vars.$bpMobile) {
+            padding-top: fn.p2r(24px);
+        }
+
         &__rights {
             text-align: center;
             font-size: fn.p2r(14px);
@@ -56,15 +64,33 @@
         &__links {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: vars.$bpMobile) {
+                width: 90%;
+                flex-direction: column;
+                align-items: center;
+            }
 
             &__link {
                 font-size: fn.p2r(12px);
                 padding-right: fn.p2r(16px);
+                text-align: center;
+
+                @media screen and (max-width: vars.$bpMobile) {
+                    margin-bottom: fn.p2r(12px);
+                    padding-right: 0;
+                }
 
                 ::after {
                     content: '|';
                     padding-left: fn.p2r(16px);
                     color: vars.$lightPrimary;
+
+                    @media screen and (max-width: vars.$bpMobile) {
+                        content: '';
+                        padding-left: 0;
+                    }
                 }
 
                 &:last-child {

@@ -25,6 +25,12 @@
             grid-template-columns: 5fr 2fr 5fr;
             margin: 0 auto;
 
+            @media screen and (max-width: vars.$bpMobile) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             &__social-media {
                 text-align: left;
                 &__list {
@@ -44,12 +50,20 @@
                         }
                     }
                 }
+
+                @media screen and (max-width: vars.$bpMobile) {
+                    display: none;
+                }
             }
 
             &__logo {
                 text-align: center;
                 img {
                     height: fn.p2r(80px);
+
+                    @media screen and (max-width: vars.$bpMobile) {
+                        height: fn.p2r(24px);
+                    }
                 }
             }
 
@@ -111,9 +125,19 @@
                     }
 
                     &__link {
+                        @media screen and (max-width: vars.$bpMobile) {
+                            display: none;
+                        }
+
                         &--is-inactive {
                             display: none;
                         }
+                    }
+                }
+
+                &__sign-in {
+                    @media screen and (max-width: vars.$bpMobile) {
+                        display: none;
                     }
                 }
             }
@@ -124,6 +148,10 @@
             display: flex;
             justify-content: center;
             padding-top: fn.p2r(32px);
+
+            @media screen and (max-width: vars.$bpMobile) {
+                display: none;
+            }
 
             &__links {
                 width: 60%;
