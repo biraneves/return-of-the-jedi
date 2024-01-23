@@ -213,6 +213,24 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleTabVisibility(e.target);
         });
     });
+
+    // Smooth scroll with offset
+    document.querySelectorAll('.header__container__bottom-row__links__item__link').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+
+            const headerHeight = document.querySelector('header').offsetHeight;
+            let clickedElement = e.target;
+            const sectionId = clickedElement.getAttribute('href');
+            const section = document.querySelector(sectionId);
+
+            window.scroll({
+                top: section.offsetTop - headerHeight,
+                left: 0,
+                behavior: 'smooth',
+            });
+        });
+    });
 });
 
 const toggleSearchVisibility = () => {
